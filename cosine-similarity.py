@@ -1,15 +1,6 @@
 
-# coding: utf-8
-
-# In[22]:
-
-
 import nltk
 from nltk.corpus import stopwords
-
-
-# In[23]:
-
 
 stop_en = stopwords.words('english')
 
@@ -23,10 +14,6 @@ text1 = preprocesing(f1.read())
 
 f2 = open('job_req.txt','r')
 text2 = preprocessing(f2.read())
-
-
-# In[24]:
-
 
 from gensim.models.doc2vec import TaggedDocument
 from gensim.models import Doc2Vec
@@ -57,10 +44,6 @@ for epoch in range(max_epochs):
     model.alpha -= 0.0002
     # fix the learning rate, no decay
     model.min_alpha = model.alpha
-
-
-# In[25]:
-
 
 similarity = model.n_similarity(text1,text2)
 print("Similarity Index : {:4.2f}%".format(similarity*100))
