@@ -42,7 +42,10 @@ def read_All_CV(filename):
 #    global model
 #    model = Word2Vec(vector, size=200, window=5, min_count=3, workers=4)
 #    model.save(dir_model_name)
-#    
+#   
+# data1 : path to Job Description
+# dircvs : path to folder containing CVs
+# model : path to trained model
     
 def find(data1,dircvs,model):  
     
